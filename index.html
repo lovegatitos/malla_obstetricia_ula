@@ -2,12 +2,13 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Malla Curricular Interactiva - Obstetricia y Puericultura - Universidad de los Lagos</title>
   <style>
     body {
       font-family: Arial, sans-serif;
       /* Fondo rosado claro, cercano al rojo */
-      background: #FFE0E0; /* Un rosado suave */
+      background: #FFE0E0;
       margin: 0;
       padding: 20px;
     }
@@ -15,34 +16,35 @@
       text-align: center;
       margin-bottom: 40px;
       /* Letras del título en rosado o rojo más oscuro */
-      color: #A00000; /* Un rojo oscuro, puedes probar con #C00000 para un rosado más oscuro */
+      color: #A00000;
     }
     .year-container {
-  display: flex;
-  gap: 20px;
-  overflow-x: auto; /* ¡Asegúrate de que esta línea esté presente! */
-  justify-content: center;
-  padding-bottom: 20px; /* Espacio para la barra de desplazamiento si es necesario */
+      display: flex;
+      gap: 20px;
+      /* Permite el desplazamiento horizontal si el contenido es demasiado ancho */
+      overflow-x: auto;
+      justify-content: center;
+      padding-bottom: 20px;
     }
     .year-column {
       display: flex;
       flex-direction: column;
       gap: 20px;
-      min-width: 280px;
+      min-width: 280px; /* Asegura un ancho mínimo para cada año */
     }
     .semestre {
       /* Tonalidad rojiza clara con borde rojo */
-      background: #FFCCCC; /* Un rosado rojizo claro */
-      border: 2px solid #CC0000; /* Borde rojo */
+      background: #FFCCCC;
+      border: 2px solid #CC0000;
       border-radius: 12px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.15); /* Sombra un poco más pronunciada */
+      box-shadow: 0 4px 10px rgba(0,0,0,0.15);
       padding: 15px;
       transition: all 0.3s ease;
     }
     .semestre h2 {
       font-size: 1.1em;
       margin-bottom: 10px;
-      color: #800000; /* Color de título de semestre más oscuro */
+      color: #800000;
       text-align: center;
     }
     .ramo {
@@ -52,21 +54,25 @@
       cursor: pointer;
       transition: all 0.3s ease;
       /* Color del recuadro un poco más intenso */
-      background-color: #FF9999; /* Un rojo rosado más intenso */
-      color: #400000; /* Color de letra para ramos no completados */
+      background-color: #FF9999;
+      color: #400000;
       text-align: center;
       font-weight: bold;
+      /* Previene que el texto salte de línea de forma inesperada */
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
     }
     .ramo:hover {
-      transform: translateY(-2px); /* Pequeño efecto al pasar el mouse */
+      transform: translateY(-2px);
       box-shadow: 0 2px 6px rgba(0,0,0,0.2);
     }
     .ramo.completed {
       /* Cuando es cliqueado y completado */
-      background-color: #800080 !important; /* Morado */
-      color: #FFFFFF; /* Letras blancas para contraste */
-      text-decoration: line-through; /* Rayado a la mitad */
-      font-weight: normal; /* Vuelve a normal el peso de la fuente */
+      background-color: #800080 !important;
+      color: #FFFFFF;
+      text-decoration: line-through;
+      font-weight: normal;
     }
   </style>
 </head>
