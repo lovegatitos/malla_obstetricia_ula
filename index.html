@@ -47,7 +47,7 @@
       font-size: 1.0em;
       margin-bottom: 10px;
       text-align: center;
-      color: inherit; /* Hereda el color del texto del semestre */
+      color: inherit;
     }
     .ramo {
       padding: 8px;
@@ -61,96 +61,96 @@
       overflow: hidden;
       text-overflow: ellipsis;
       font-size: 0.9em;
-      color: inherit; /* Hereda el color del texto del ramo */
+      color: inherit;
     }
     .ramo:hover {
       transform: translateY(-2px);
       box-shadow: 0 3px 6px rgba(255,255,255,0.2); /* Sombra blanca para fondo oscuro */
     }
 
-    /* Colores Pastel para cada Año/Columna */
+    /* Colores Pastel Traslúcidos para cada Año/Columna */
     /* Año 1: Tono pastel de Rojo/Rosa */
     .year-column:nth-child(1) .semestre {
-      background: #FFDDEE; /* Rosado pastel */
-      border: 2px solid #FFBBDD;
+      background: rgba(255, 221, 238, 0.7); /* Rosado pastel traslúcido */
+      border: 2px solid rgba(255, 187, 221, 0.7);
     }
     .year-column:nth-child(1) .semestre h2 {
-      color: #D36A84; /* Rojo/rosa oscuro para el título */
+      color: #D36A84; /* Rojo/rosa oscuro para el título (opaco para legibilidad) */
     }
     .year-column:nth-child(1) .ramo {
-      background-color: #FFC0CB; /* Rosa más intenso pero pastel */
-      color: #9C274E; /* Rojo oscuro para texto */
+      background-color: rgba(255, 192, 203, 0.7); /* Rosa más intenso pero pastel traslúcido */
+      color: #9C274E; /* Rojo oscuro para texto (opaco para legibilidad) */
     }
     .year-column:nth-child(1) .ramo.completed {
-      background-color: #A05260 !important; /* Rojo/rosa suave y oscuro */
-      color: #FFFFFF !important; /* Texto blanco */
+      background-color: rgba(160, 82, 96, 0.9) !important; /* Rojo/rosa suave y oscuro, casi opaco */
+      color: #FFFFFF !important; /* Texto blanco (opaco) */
     }
 
     /* Año 2: Tono pastel de Naranja */
     .year-column:nth-child(2) .semestre {
-      background: #FFEEDD; /* Naranja pastel */
-      border: 2px solid #FFDDBB;
+      background: rgba(255, 238, 221, 0.7); /* Naranja pastel traslúcido */
+      border: 2px solid rgba(255, 221, 187, 0.7);
     }
     .year-column:nth-child(2) .semestre h2 {
-      color: #E08C53; /* Naranja oscuro para el título */
+      color: #E08C53;
     }
     .year-column:nth-child(2) .ramo {
-      background-color: #FFDAB9; /* Naranja más intenso pero pastel */
-      color: #A05A2C; /* Naranja oscuro para texto */
+      background-color: rgba(255, 218, 185, 0.7); /* Naranja más intenso pero pastel traslúcido */
+      color: #A05A2C;
     }
     .year-column:nth-child(2) .ramo.completed {
-      background-color: #B5651D !important; /* Naranja suave y oscuro */
+      background-color: rgba(181, 101, 29, 0.9) !important;
       color: #FFFFFF !important;
     }
 
     /* Año 3: Tono pastel de Amarillo */
     .year-column:nth-child(3) .semestre {
-      background: #FFFFCC; /* Amarillo pastel */
-      border: 2px solid #FFFF99;
+      background: rgba(255, 255, 204, 0.7); /* Amarillo pastel traslúcido */
+      border: 2px solid rgba(255, 255, 153, 0.7);
     }
     .year-column:nth-child(3) .semestre h2 {
-      color: #D3A03B; /* Amarillo oscuro para el título */
+      color: #D3A03B;
     }
     .year-column:nth-child(3) .ramo {
-      background-color: #FFFACD; /* Amarillo más intenso pero pastel */
-      color: #A07F00; /* Amarillo oscuro para texto */
+      background-color: rgba(255, 250, 205, 0.7); /* Amarillo más intenso pero pastel traslúcido */
+      color: #A07F00;
     }
     .year-column:nth-child(3) .ramo.completed {
-      background-color: #B59000 !important; /* Amarillo suave y oscuro */
+      background-color: rgba(181, 144, 0, 0.9) !important;
       color: #FFFFFF !important;
     }
 
     /* Año 4: Tono pastel de Verde */
     .year-column:nth-child(4) .semestre {
-      background: #DDFFDD; /* Verde pastel */
-      border: 2px solid #BBFFBB;
+      background: rgba(221, 255, 221, 0.7); /* Verde pastel traslúcido */
+      border: 2px solid rgba(187, 255, 187, 0.7);
     }
     .year-column:nth-child(4) .semestre h2 {
-      color: #70AD47; /* Verde oscuro para el título */
+      color: #70AD47;
     }
     .year-column:nth-child(4) .ramo {
-      background-color: #98FB98; /* Verde más intenso pero pastel */
-      color: #407D30; /* Verde oscuro para texto */
+      background-color: rgba(152, 251, 152, 0.7); /* Verde más intenso pero pastel traslúcido */
+      color: #407D30;
     }
     .year-column:nth-child(4) .ramo.completed {
-      background-color: #558B2F !important; /* Verde suave y oscuro */
+      background-color: rgba(85, 139, 47, 0.9) !important;
       color: #FFFFFF !important;
     }
 
     /* Año 5: Tono pastel de Azul */
     .year-column:nth-child(5) .semestre {
-      background: #DDEEFF; /* Azul pastel */
-      border: 2px solid #BBCCFF;
+      background: rgba(221, 238, 255, 0.7); /* Azul pastel traslúcido */
+      border: 2px solid rgba(187, 204, 255, 0.7);
     }
     .year-column:nth-child(5) .semestre h2 {
-      color: #6A93D3; /* Azul oscuro para el título */
+      color: #6A93D3;
     }
     .year-column:nth-child(5) .ramo {
-      background-color: #ADD8E6; /* Azul más intenso pero pastel */
-      color: #36679B; /* Azul oscuro para texto */
+      background-color: rgba(173, 216, 230, 0.7); /* Azul más intenso pero pastel traslúcido */
+      color: #36679B;
     }
     .year-column:nth-child(5) .ramo.completed {
-      background-color: #4682B4 !important; /* Azul suave y oscuro */
+      background-color: rgba(70, 130, 180, 0.9) !important;
       color: #FFFFFF !important;
     }
 
