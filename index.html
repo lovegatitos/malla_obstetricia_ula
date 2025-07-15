@@ -7,52 +7,121 @@
   <style>
     body {
       font-family: Arial, sans-serif;
-      background: #FFE0E0; /* Rosado claro */
+      background: #F0F8FF; /* Azul muy claro para un fondo neutral */
       margin: 0;
       padding: 20px;
     }
     h1 {
       text-align: center;
       margin-bottom: 40px;
-      color: #A00000; /* Rojo oscuro */
+      color: #333333; /* Un gris oscuro para el título */
     }
     .year-container {
       display: flex;
       gap: 20px;
+      /* Esencial para el desplazamiento horizontal */
       overflow-x: auto;
-      justify-content: center;
-      padding-bottom: 20px;
+      justify-content: flex-start; /* Alinea al inicio, no al centro */
+      padding-bottom: 20px; /* Espacio para la barra de desplazamiento */
+      /* Añadimos un poco de margen para que la barra de desplazamiento no esté pegada */
+      margin: 0 auto; /* Centra el contenedor si hay espacio */
+      max-width: 100%; /* Asegura que no se desborde del body */
     }
     .year-column {
       display: flex;
       flex-direction: column;
       gap: 20px;
-      min-width: 280px;
+      min-width: 300px; /* Un poco más de ancho para cada año/columna */
+      flex-shrink: 0; /* Evita que las columnas se encojan */
     }
-    .semestre {
-      background: #FFCCCC; /* Rojizo claro */
-      border: 2px solid #CC0000; /* Borde rojo */
-      border-radius: 12px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.15);
-      padding: 15px;
-      transition: all 0.3s ease;
+
+    /* Estilos para el arcoíris - Colores por Año/Columna */
+    /* Año 1: Rojo */
+    .year-column:nth-child(1) .semestre {
+      background: #FFCCCC; /* Rojo claro */
+      border: 2px solid #FF0000;
+      box-shadow: 0 4px 10px rgba(255,0,0,0.2);
     }
-    .semestre h2 {
-      font-size: 1.1em;
-      margin-bottom: 10px;
-      color: #800000;
-      text-align: center;
+    .year-column:nth-child(1) .ramo {
+      background-color: #FF6666; /* Rojo más intenso */
+      color: #FFFFFF; /* Texto blanco para contraste */
     }
+    .year-column:nth-child(1) .semestre h2 {
+      color: #CC0000;
+    }
+
+    /* Año 2: Naranja */
+    .year-column:nth-child(2) .semestre {
+      background: #FFDDAA; /* Naranja claro */
+      border: 2px solid #FFA500;
+      box-shadow: 0 4px 10px rgba(255,165,0,0.2);
+    }
+    .year-column:nth-child(2) .ramo {
+      background-color: #FFB766; /* Naranja más intenso */
+      color: #FFFFFF;
+    }
+    .year-column:nth-child(2) .semestre h2 {
+      color: #E07B00;
+    }
+
+    /* Año 3: Amarillo */
+    .year-column:nth-child(3) .semestre {
+      background: #FFFFCC; /* Amarillo claro */
+      border: 2px solid #FFD700;
+      box-shadow: 0 4px 10px rgba(255,215,0,0.2);
+    }
+    .year-column:nth-child(3) .ramo {
+      background-color: #FFEE66; /* Amarillo más intenso */
+      color: #333333; /* Texto oscuro para contraste */
+    }
+    .year-column:nth-child(3) .semestre h2 {
+      color: #CCAA00;
+    }
+
+    /* Año 4: Verde */
+    .year-column:nth-child(4) .semestre {
+      background: #CCFFCC; /* Verde claro */
+      border: 2px solid #00FF00;
+      box-shadow: 0 4px 10px rgba(0,255,0,0.2);
+    }
+    .year-column:nth-child(4) .ramo {
+      background-color: #66FF66; /* Verde más intenso */
+      color: #333333;
+    }
+    .year-column:nth-child(4) .semestre h2 {
+      color: #00AA00;
+    }
+
+    /* Año 5: Azul */
+    .year-column:nth-child(5) .semestre {
+      background: #CCE0FF; /* Azul claro */
+      border: 2px solid #0000FF;
+      box-shadow: 0 4px 10px rgba(0,0,255,0.2);
+    }
+    .year-column:nth-child(5) .ramo {
+      background-color: #6699FF; /* Azul más intenso */
+      color: #FFFFFF;
+    }
+    .year-column:nth-child(5) .semestre h2 {
+      color: #0000AA;
+    }
+
+    /* Estilo para ramos completados (el morado suave) */
+    .ramo.completed {
+      background-color: #DDA0DD !important; /* Morado suave (Plum) */
+      color: #580058 !important; /* Color de texto oscuro para el morado suave */
+      text-decoration: line-through;
+      font-weight: normal;
+    }
+
+    /* Estilos generales para ramos (sin cambio, solo para asegurar que se aplica) */
     .ramo {
       padding: 10px;
       margin: 8px 0;
       border-radius: 8px;
       cursor: pointer;
       transition: all 0.3s ease;
-      background-color: #FF9999; /* Rojo rosado más intenso */
-      color: #400000;
       text-align: center;
-      font-weight: bold;
       white-space: nowrap;
       overflow: hidden;
       text-overflow: ellipsis;
@@ -61,11 +130,10 @@
       transform: translateY(-2px);
       box-shadow: 0 2px 6px rgba(0,0,0,0.2);
     }
-    .ramo.completed {
-      background-color: #DDA0DD !important; /* Morado suave (Plum) */
-      color: #580058; /* Color de texto para el morado suave */
-      text-decoration: line-through;
-      font-weight: normal;
+    .semestre h2 {
+      font-size: 1.1em;
+      margin-bottom: 10px;
+      text-align: center;
     }
   </style>
 </head>
