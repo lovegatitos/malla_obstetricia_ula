@@ -9,46 +9,48 @@
       font-family: Arial, sans-serif;
       background: #F8F8FF; /* Un color de fondo muy suave, casi blanco */
       margin: 0;
-      padding: 20px;
+      padding: 15px; /* Reducido para un layout más junto */
+      font-size: 0.9em; /* Reduce el tamaño de fuente base */
     }
     h1 {
       text-align: center;
-      margin-bottom: 40px;
-      color: #555555; /* Un gris medio para el título */
+      margin-bottom: 30px; /* Reducido */
+      color: #555555;
+      font-size: 1.8em; /* Reducido ligeramente */
     }
     .year-container {
       display: flex;
-      gap: 30px; /* Aumentamos el espacio entre columnas de año */
+      gap: 15px; /* Reducido */
       overflow-x: auto;
       justify-content: flex-start;
-      padding-bottom: 20px;
+      padding-bottom: 15px; /* Reducido */
       margin: 0 auto;
       max-width: 100%;
     }
     .year-column {
       display: flex;
       flex-direction: column;
-      gap: 30px; /* Aumentamos el espacio entre semestres */
-      min-width: 350px; /* Hacemos las columnas de año más amplias */
+      gap: 15px; /* Reducido */
+      min-width: 250px; /* Más pequeño para que quepa más en pantalla */
       flex-shrink: 0;
     }
 
     /* Estilos base para semestre y ramo */
     .semestre {
-      border-radius: 20px; /* Puntas más redondeadas para los semestres */
-      box-shadow: 0 6px 15px rgba(0,0,0,0.1); /* Sombra un poco más pronunciada */
-      padding: 20px; /* Más padding para que el recuadro sea más amplio */
+      border-radius: 10px; /* Menos redondeado */
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1); /* Sombra más sutil */
+      padding: 15px; /* Reducido */
       transition: all 0.3s ease;
     }
     .semestre h2 {
-      font-size: 1.2em;
-      margin-bottom: 15px;
+      font-size: 1.0em; /* Reducido */
+      margin-bottom: 10px; /* Reducido */
       text-align: center;
     }
     .ramo {
-      padding: 12px; /* Más padding para los ramos */
-      margin: 10px 0;
-      border-radius: 10px; /* Puntas redondeadas para los ramos */
+      padding: 8px; /* Reducido */
+      margin: 5px 0; /* Reducido */
+      border-radius: 6px; /* Menos redondeado */
       cursor: pointer;
       transition: all 0.3s ease;
       text-align: center;
@@ -56,13 +58,14 @@
       white-space: nowrap;
       overflow: hidden;
       text-overflow: ellipsis;
+      font-size: 0.9em; /* Reducido */
     }
     .ramo:hover {
-      transform: translateY(-3px); /* Efecto hover un poco más notorio */
-      box-shadow: 0 4px 8px rgba(0,0,0,0.25);
+      transform: translateY(-2px); /* Efecto hover más sutil */
+      box-shadow: 0 3px 6px rgba(0,0,0,0.2);
     }
 
-    /* Colores Pastel para cada Año/Columna */
+    /* Colores Pastel para cada Año/Columna (mismos tonos, pero se aplicarán a un layout más pequeño) */
     /* Año 1: Tono pastel de Rojo/Rosa */
     .year-column:nth-child(1) .semestre {
       background: #FFDDEE; /* Rosado pastel */
@@ -119,166 +122,4 @@
       background: #DDFFDD; /* Verde pastel */
       border: 2px solid #BBFFBB;
     }
-    .year-column:nth-child(4) .semestre h2 {
-      color: #70AD47; /* Verde oscuro para el título */
-    }
-    .year-column:nth-child(4) .ramo {
-      background-color: #98FB98; /* Verde más intenso pero pastel */
-      color: #407D30; /* Verde oscuro para texto */
-    }
-    .year-column:nth-child(4) .ramo.completed {
-      background-color: #558B2F !important; /* Verde suave y oscuro */
-      color: #FFFFFF !important;
-    }
-
-    /* Año 5: Tono pastel de Azul */
-    .year-column:nth-child(5) .semestre {
-      background: #DDEEFF; /* Azul pastel */
-      border: 2px solid #BBCCFF;
-    }
-    .year-column:nth-child(5) .semestre h2 {
-      color: #6A93D3; /* Azul oscuro para el título */
-    }
-    .year-column:nth-child(5) .ramo {
-      background-color: #ADD8E6; /* Azul más intenso pero pastel */
-      color: #36679B; /* Azul oscuro para texto */
-    }
-    .year-column:nth-child(5) .ramo.completed {
-      background-color: #4682B4 !important; /* Azul suave y oscuro */
-      color: #FFFFFF !important;
-    }
-
-    /* Estilos para texto rayado al completar, aplicado en el JS */
-    .ramo.completed {
-      text-decoration: line-through;
-      font-weight: normal;
-    }
-  </style>
-</head>
-<body>
-
-<h1>Obstetricia y Puericultura - Universidad de los Lagos</h1>
-<div class="year-container">
-<div class="year-column">
-<div class="semestre">
-  <h2>1° Año - Semestre I</h2>
-  <div class="ramo" data-ramo-id="1-1-comunicacion-i">Comunicación I</div>
-  <div class="ramo" data-ramo-id="1-1-fundamentos-salud-sexual-reproductiva">Fundamentos de la Salud Sexual y Reproductiva</div>
-  <div class="ramo" data-ramo-id="1-1-bases-biologicas">Bases Biológicas en la Salud Sexual y Reproductiva</div>
-  <div class="ramo" data-ramo-id="1-1-bases-bioquimicas">Bases Bioquímicas en Salud Sexual y Reproductiva</div>
-  <div class="ramo" data-ramo-id="1-1-antropologia">Antropología en Salud Sexual y Reproductiva</div>
-</div>
-<div class="semestre">
-  <h2>1° Año - Semestre II</h2>
-  <div class="ramo" data-ramo-id="1-2-ciudadania-i">Ciudadanía I</div>
-  <div class="ramo" data-ramo-id="1-2-bioestadistica">Bioestadística</div>
-  <div class="ramo" data-ramo-id="1-2-microbiologia-parasitologia">Microbiología y Parasitología</div>
-  <div class="ramo" data-ramo-id="1-2-anatomia">Anatomía</div>
-  <div class="ramo" data-ramo-id="1-2-fisiologia-histologia">Fisiología e Histología</div>
-  <div class="ramo" data-ramo-id="1-2-enfermeria-basica">Enfermería Básica</div>
-  <div class="ramo" data-ramo-id="1-2-electivo-ufin-1">Electivo UFIN</div>
-</div>
-</div>
-<div class="year-column">
-<div class="semestre">
-  <h2>2° Año - Semestre III</h2>
-  <div class="ramo" data-ramo-id="2-3-ingles-i">Inglés I</div>
-  <div class="ramo" data-ramo-id="2-3-epidemiologia">Epidemiología</div>
-  <div class="ramo" data-ramo-id="2-3-psicologia">Psicología</div>
-  <div class="ramo" data-ramo-id="2-3-fisiopatologia-farmacologia">Fisiopatología y Farmacología</div>
-  <div class="ramo" data-ramo-id="2-3-bases-fisiologicas-ginecologia">Bases Fisiológicas en Ginecología</div>
-  <div class="ramo" data-ramo-id="2-3-proceso-enfermeria-salud-sexual-reproductiva">Proceso de Enfermería en Salud Sexual y Reproductiva</div>
-</div>
-<div class="semestre">
-  <h2>2° Año - Semestre IV</h2>
-  <div class="ramo" data-ramo-id="2-4-ingles-ii">Inglés II</div>
-  <div class="ramo" data-ramo-id="2-4-bases-fisiologicas-obstetricia-neonatologia">Bases Fisiológicas en Obstetricia y Neonatología</div>
-  <div class="ramo" data-ramo-id="2-4-bases-patologicas-ginecologia">Bases Patológicas en Ginecología</div>
-  <div class="ramo" data-ramo-id="2-4-salud-familiar-comunitaria">Salud Familiar y Comunitaria</div>
-  <div class="ramo" data-ramo-id="2-4-proceso-enfermeria-gineco-obstetricia">Proceso de Enfermería en la Gineco-Obstetricia</div>
-  <div class="ramo" data-ramo-id="2-4-electivo-ufin-2">Electivo UFIN</div>
-</div>
-</div>
-<div class="year-column">
-<div class="semestre">
-  <h2>3° Año - Semestre V</h2>
-  <div class="ramo" data-ramo-id="3-5-ingles-iii">Inglés III</div>
-  <div class="ramo" data-ramo-id="3-5-introduccion-gestion-salud-sexual-reproductiva">Introducción a la Gestión en Salud Sexual y Reproductiva</div>
-  <div class="ramo" data-ramo-id="3-5-bases-patologicas-obstetricia-neonatologia">Bases Patológicas en Obstetricia y Neonatología</div>
-  <div class="ramo" data-ramo-id="3-5-educacion-salud-sexual-reproductiva">Educación en Salud Sexual y Reproductiva</div>
-  <div class="ramo" data-ramo-id="3-5-salud-familiar-aps">Salud Familiar en APS</div>
-</div>
-<div class="semestre">
-  <h2>3° Año - Semestre VI</h2>
-  <div class="ramo" data-ramo-id="3-6-ingles-iv">Inglés IV</div>
-  <div class="ramo" data-ramo-id="3-6-metodologia-investigacion">Metodología de la Investigación</div>
-  <div class="ramo" data-ramo-id="3-6-clinica-cuidados-perinatales">Clínica de Cuidados Perinatales</div>
-  <div class="ramo" data-ramo-id="3-6-electivo-ufin-3">Electivo UFIN</div>
-</div>
-</div>
-<div class="year-column">
-<div class="semestre">
-  <h2>4° Año - Semestre VII</h2>
-  <div class="ramo" data-ramo-id="4-7-seminario-investigacion">Seminario de Investigación</div>
-  <div class="ramo" data-ramo-id="4-7-clinica-gine-oncologica">Clínica gine-oncológica</div>
-  <div class="ramo" data-ramo-id="4-7-electivo-ufin-4">Electivo UFIN</div>
-</div>
-<div class="semestre">
-  <h2>4° Año - Semestre VIII</h2>
-  <div class="ramo" data-ramo-id="4-8-gestion-proyectos">Gestión de Proyectos (Ciudadanía II)</div>
-  <div class="ramo" data-ramo-id="4-8-clinica-perinatal-patologica">Clínica Perinatal Patológica</div>
-</div>
-</div>
-<div class="year-column">
-<div class="semestre">
-  <h2>5° Año - Semestre IX</h2>
-  <div class="ramo" data-ramo-id="5-9-internado-i">Internado I</div>
-  <div class="ramo" data-ramo-id="5-9-electivo-especializacion">Electivo Especialización / Articulación Postgrado</div>
-</div>
-<div class="semestre">
-  <h2>5° Año - Semestre X</h2>
-  <div class="ramo" data-ramo-id="5-10-internado-ii">Internado II</div>
-</div>
-</div>
-
-</div>
-
-<script>
-  document.addEventListener('DOMContentLoaded', function() {
-    const ramos = document.querySelectorAll('.ramo');
-
-    // Función para cargar el estado guardado
-    function loadCompletedRamos() {
-      const completedRamos = JSON.parse(localStorage.getItem('completedRamos')) || [];
-      ramos.forEach(ramo => {
-        const ramoId = ramo.dataset.ramoId;
-        if (completedRamos.includes(ramoId)) {
-          ramo.classList.add('completed');
-        }
-      });
-    }
-
-    // Función para guardar el estado actual
-    function saveCompletedRamos() {
-      const completedRamos = [];
-      document.querySelectorAll('.ramo.completed').forEach(ramo => {
-        completedRamos.push(ramo.dataset.ramoId);
-      });
-      localStorage.setItem('completedRamos', JSON.stringify(completedRamos));
-    }
-
-    // Añadir el evento de clic a cada ramo
-    ramos.forEach(ramo => {
-      ramo.addEventListener('click', function() {
-        this.classList.toggle('completed');
-        saveCompletedRamos(); // Guardar el estado cada vez que se hace clic
-      });
-    });
-
-    // Cargar el estado al cargar la página
-    loadCompletedRamos();
-  });
-</script>
-
-</body>
-</html>
+    .year-column:nth-child(4) .semestre h2
