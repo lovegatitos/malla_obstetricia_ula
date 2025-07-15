@@ -2,24 +2,27 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <title>Malla Curricular Interactiva - Obstetricia ULA</title>
+  <title>Malla Curricular Interactiva - Obstetricia y Puericultura - Universidad de los Lagos</title>
   <style>
     body {
       font-family: Arial, sans-serif;
-      background: #f9fbff;
+      /* Fondo rosado claro, cercano al rojo */
+      background: #FFE0E0; /* Un rosado suave */
       margin: 0;
       padding: 20px;
     }
     h1 {
       text-align: center;
       margin-bottom: 40px;
-      color: #5a2ea0;
+      /* Letras del título en rosado o rojo más oscuro */
+      color: #A00000; /* Un rojo oscuro, puedes probar con #C00000 para un rosado más oscuro */
     }
     .year-container {
       display: flex;
       gap: 20px;
       overflow-x: auto;
       justify-content: center;
+      padding-bottom: 20px; /* Espacio para la barra de desplazamiento si es necesario */
     }
     .year-column {
       display: flex;
@@ -28,113 +31,128 @@
       min-width: 280px;
     }
     .semestre {
-      background: #ffffff;
+      /* Tonalidad rojiza clara con borde rojo */
+      background: #FFCCCC; /* Un rosado rojizo claro */
+      border: 2px solid #CC0000; /* Borde rojo */
       border-radius: 12px;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      box-shadow: 0 4px 10px rgba(0,0,0,0.15); /* Sombra un poco más pronunciada */
       padding: 15px;
-    }
-    .semestre h2 {
-      font-size: 1em;
-      margin-bottom: 10px;
-      color: #333;
-    }
-    .ramo {
-      padding: 8px;
-      margin: 6px 0;
-      border-radius: 6px;
-      cursor: pointer;
       transition: all 0.3s ease;
     }
-    .ramo.completed {
-      background-color: #8be29a !important;
+    .semestre h2 {
+      font-size: 1.1em;
+      margin-bottom: 10px;
+      color: #800000; /* Color de título de semestre más oscuro */
+      text-align: center;
+    }
+    .ramo {
+      padding: 10px;
+      margin: 8px 0;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      /* Color del recuadro un poco más intenso */
+      background-color: #FF9999; /* Un rojo rosado más intenso */
+      color: #400000; /* Color de letra para ramos no completados */
+      text-align: center;
       font-weight: bold;
-      color: #064d1a;
+    }
+    .ramo:hover {
+      transform: translateY(-2px); /* Pequeño efecto al pasar el mouse */
+      box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+    }
+    .ramo.completed {
+      /* Cuando es cliqueado y completado */
+      background-color: #800080 !important; /* Morado */
+      color: #FFFFFF; /* Letras blancas para contraste */
+      text-decoration: line-through; /* Rayado a la mitad */
+      font-weight: normal; /* Vuelve a normal el peso de la fuente */
     }
   </style>
 </head>
 <body>
 
-<h1>Malla Curricular Interactiva - Obstetricia ULA</h1>
+<h1>Obstetricia y Puericultura - Universidad de los Lagos</h1>
 <div class="year-container">
 <div class="year-column">
 <div class="semestre">
   <h2>1° Año - Semestre I</h2>
-  <div class="ramo" style="background-color: #e4ddfa;" onclick="this.classList.toggle('completed')">Comunicación I</div>
-  <div class="ramo" style="background-color: #e4ddfa;" onclick="this.classList.toggle('completed')">Fundamentos de la Salud Sexual y Reproductiva</div>
-  <div class="ramo" style="background-color: #e4ddfa;" onclick="this.classList.toggle('completed')">Bases Biológicas en la Salud Sexual y Reproductiva</div>
-  <div class="ramo" style="background-color: #e4ddfa;" onclick="this.classList.toggle('completed')">Bases Bioquímicas en Salud Sexual y Reproductiva</div>
-  <div class="ramo" style="background-color: #e4ddfa;" onclick="this.classList.toggle('completed')">Antropología en Salud Sexual y Reproductiva</div>
+  <div class="ramo" onclick="this.classList.toggle('completed')">Comunicación I</div>
+  <div class="ramo" onclick="this.classList.toggle('completed')">Fundamentos de la Salud Sexual y Reproductiva</div>
+  <div class="ramo" onclick="this.classList.toggle('completed')">Bases Biológicas en la Salud Sexual y Reproductiva</div>
+  <div class="ramo" onclick="this.classList.toggle('completed')">Bases Bioquímicas en Salud Sexual y Reproductiva</div>
+  <div class="ramo" onclick="this.classList.toggle('completed')">Antropología en Salud Sexual y Reproductiva</div>
 </div>
 <div class="semestre">
   <h2>1° Año - Semestre II</h2>
-  <div class="ramo" style="background-color: #e4ddfa;" onclick="this.classList.toggle('completed')">Ciudadanía I</div>
-  <div class="ramo" style="background-color: #e4ddfa;" onclick="this.classList.toggle('completed')">Bioestadística</div>
-  <div class="ramo" style="background-color: #e4ddfa;" onclick="this.classList.toggle('completed')">Microbiología y Parasitología</div>
-  <div class="ramo" style="background-color: #e4ddfa;" onclick="this.classList.toggle('completed')">Anatomía</div>
-  <div class="ramo" style="background-color: #e4ddfa;" onclick="this.classList.toggle('completed')">Fisiología e Histología</div>
-  <div class="ramo" style="background-color: #e4ddfa;" onclick="this.classList.toggle('completed')">Enfermería Básica</div>
-  <div class="ramo" style="background-color: #e4ddfa;" onclick="this.classList.toggle('completed')">Electivo UFIN</div>
+  <div class="ramo" onclick="this.classList.toggle('completed')">Ciudadanía I</div>
+  <div class="ramo" onclick="this.classList.toggle('completed')">Bioestadística</div>
+  <div class="ramo" onclick="this.classList.toggle('completed')">Microbiología y Parasitología</div>
+  <div class="ramo" onclick="this.classList.toggle('completed')">Anatomía</div>
+  <div class="ramo" onclick="this.classList.toggle('completed')">Fisiología e Histología</div>
+  <div class="ramo" onclick="this.classList.toggle('completed')">Enfermería Básica</div>
+  <div class="ramo" onclick="this.classList.toggle('completed')">Electivo UFIN</div>
 </div>
 </div>
 <div class="year-column">
 <div class="semestre">
   <h2>2° Año - Semestre III</h2>
-  <div class="ramo" style="background-color: #cdeff9;" onclick="this.classList.toggle('completed')">Inglés I</div>
-  <div class="ramo" style="background-color: #cdeff9;" onclick="this.classList.toggle('completed')">Epidemiología</div>
-  <div class="ramo" style="background-color: #cdeff9;" onclick="this.classList.toggle('completed')">Psicología</div>
-  <div class="ramo" style="background-color: #cdeff9;" onclick="this.classList.toggle('completed')">Fisiopatología y Farmacología</div>
-  <div class="ramo" style="background-color: #cdeff9;" onclick="this.classList.toggle('completed')">Bases Fisiológicas en Ginecología</div>
-  <div class="ramo" style="background-color: #cdeff9;" onclick="this.classList.toggle('completed')">Proceso de Enfermería en Salud Sexual y Reproductiva</div>
+  <div class="ramo" onclick="this.classList.toggle('completed')">Inglés I</div>
+  <div class="ramo" onclick="this.classList.toggle('completed')">Epidemiología</div>
+  <div class="ramo" onclick="this.classList.toggle('completed')">Psicología</div>
+  <div class="ramo" onclick="this.classList.toggle('completed')">Fisiopatología y Farmacología</div>
+  <div class="ramo" onclick="this.classList.toggle('completed')">Bases Fisiológicas en Ginecología</div>
+  <div class="ramo" onclick="this.classList.toggle('completed')">Proceso de Enfermería en Salud Sexual y Reproductiva</div>
 </div>
 <div class="semestre">
   <h2>2° Año - Semestre IV</h2>
-  <div class="ramo" style="background-color: #cdeff9;" onclick="this.classList.toggle('completed')">Inglés II</div>
-  <div class="ramo" style="background-color: #cdeff9;" onclick="this.classList.toggle('completed')">Bases Fisiológicas en Obstetricia y Neonatología</div>
-  <div class="ramo" style="background-color: #cdeff9;" onclick="this.classList.toggle('completed')">Bases Patológicas en Ginecología</div>
-  <div class="ramo" style="background-color: #cdeff9;" onclick="this.classList.toggle('completed')">Salud Familiar y Comunitaria</div>
-  <div class="ramo" style="background-color: #cdeff9;" onclick="this.classList.toggle('completed')">Proceso de Enfermería en la Gineco-Obstetricia</div>
-  <div class="ramo" style="background-color: #cdeff9;" onclick="this.classList.toggle('completed')">Electivo UFIN</div>
+  <div class="ramo" onclick="this.classList.toggle('completed')">Inglés II</div>
+  <div class="ramo" onclick="this.classList.toggle('completed')">Bases Fisiológicas en Obstetricia y Neonatología</div>
+  <div class="ramo" onclick="this.classList.toggle('completed')">Bases Patológicas en Ginecología</div>
+  <div class="ramo" onclick="this.classList.toggle('completed')">Salud Familiar y Comunitaria</div>
+  <div class="ramo" onclick="this.classList.toggle('completed')">Proceso de Enfermería en la Gineco-Obstetricia</div>
+  <div class="ramo" onclick="this.classList.toggle('completed')">Electivo UFIN</div>
 </div>
 </div>
 <div class="year-column">
 <div class="semestre">
   <h2>3° Año - Semestre V</h2>
-  <div class="ramo" style="background-color: #fcf4dd;" onclick="this.classList.toggle('completed')">Inglés III</div>
-  <div class="ramo" style="background-color: #fcf4dd;" onclick="this.classList.toggle('completed')">Introducción a la Gestión en Salud Sexual y Reproductiva</div>
-  <div class="ramo" style="background-color: #fcf4dd;" onclick="this.classList.toggle('completed')">Bases Patológicas en Obstetricia y Neonatología</div>
-  <div class="ramo" style="background-color: #fcf4dd;" onclick="this.classList.toggle('completed')">Educación en Salud Sexual y Reproductiva</div>
-  <div class="ramo" style="background-color: #fcf4dd;" onclick="this.classList.toggle('completed')">Salud Familiar en APS</div>
+  <div class="ramo" onclick="this.classList.toggle('completed')">Inglés III</div>
+  <div class="ramo" onclick="this.classList.toggle('completed')">Introducción a la Gestión en Salud Sexual y Reproductiva</div>
+  <div class="ramo" onclick="this.classList.toggle('completed')">Bases Patológicas en Obstetricia y Neonatología</div>
+  <div class="ramo" onclick="this.classList.toggle('completed')">Educación en Salud Sexual y Reproductiva</div>
+  <div class="ramo" onclick="this.classList.toggle('completed')">Salud Familiar en APS</div>
 </div>
 <div class="semestre">
   <h2>3° Año - Semestre VI</h2>
-  <div class="ramo" style="background-color: #fcf4dd;" onclick="this.classList.toggle('completed')">Inglés IV</div>
-  <div class="ramo" style="background-color: #fcf4dd;" onclick="this.classList.toggle('completed')">Metodología de la Investigación</div>
-  <div class="ramo" style="background-color: #fcf4dd;" onclick="this.classList.toggle('completed')">Clínica de Cuidados Perinatales</div>
-  <div class="ramo" style="background-color: #fcf4dd;" onclick="this.classList.toggle('completed')">Electivo UFIN</div>
+  <div class="ramo" onclick="this.classList.toggle('completed')">Inglés IV</div>
+  <div class="ramo" onclick="this.classList.toggle('completed')">Metodología de la Investigación</div>
+  <div class="ramo" onclick="this.classList.toggle('completed')">Clínica de Cuidados Perinatales</div>
+  <div class="ramo" onclick="this.classList.toggle('completed')">Electivo UFIN</div>
 </div>
 </div>
 <div class="year-column">
 <div class="semestre">
   <h2>4° Año - Semestre VII</h2>
-  <div class="ramo" style="background-color: #ffe0e0;" onclick="this.classList.toggle('completed')">Seminario de Investigación</div>
-  <div class="ramo" style="background-color: #ffe0e0;" onclick="this.classList.toggle('completed')">Clínica gine-oncológica</div>
-  <div class="ramo" style="background-color: #ffe0e0;" onclick="this.classList.toggle('completed')">Electivo UFIN</div>
+  <div class="ramo" onclick="this.classList.toggle('completed')">Seminario de Investigación</div>
+  <div class="ramo" onclick="this.classList.toggle('completed')">Clínica gine-oncológica</div>
+  <div class="ramo" onclick="this.classList.toggle('completed')">Electivo UFIN</div>
 </div>
 <div class="semestre">
   <h2>4° Año - Semestre VIII</h2>
-  <div class="ramo" style="background-color: #ffe0e0;" onclick="this.classList.toggle('completed')">Gestión de Proyectos (Ciudadanía II)</div>
-  <div class="ramo" style="background-color: #ffe0e0;" onclick="this.classList.toggle('completed')">Clínica Perinatal Patológica</div>
+  <div class="ramo" onclick="this.classList.toggle('completed')">Gestión de Proyectos (Ciudadanía II)</div>
+  <div class="ramo" onclick="this.classList.toggle('completed')">Clínica Perinatal Patológica</div>
 </div>
 </div>
 <div class="year-column">
 <div class="semestre">
   <h2>5° Año - Semestre IX</h2>
-  <div class="ramo" style="background-color: #d4f4dd;" onclick="this.classList.toggle('completed')">Internado I</div>
-  <div class="ramo" style="background-color: #d4f4dd;" onclick="this.classList.toggle('completed')">Electivo Especialización / Articulación Postgrado</div>
+  <div class="ramo" onclick="this.classList.toggle('completed')">Internado I</div>
+  <div class="ramo" onclick="this.classList.toggle('completed')">Electivo Especialización / Articulación Postgrado</div>
 </div>
 <div class="semestre">
   <h2>5° Año - Semestre X</h2>
-  <div class="ramo" style="background-color: #d4f4dd;" onclick="this.classList.toggle('completed')">Internado II</div>
+  <div class="ramo" onclick="this.classList.toggle('completed')">Internado II</div>
 </div>
 </div>
 
