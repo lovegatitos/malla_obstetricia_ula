@@ -7,50 +7,52 @@
   <style>
     body {
       font-family: Arial, sans-serif;
-      background: #F8F8FF; /* Un color de fondo muy suave, casi blanco */
+      background: #000000; /* Fondo negro */
+      color: #FFFFFF; /* Letras blancas por defecto */
       margin: 0;
-      padding: 15px; /* Reducido para un layout más junto */
-      font-size: 0.9em; /* Reduce el tamaño de fuente base */
+      padding: 15px;
+      font-size: 0.9em;
     }
     h1 {
       text-align: center;
-      margin-bottom: 30px; /* Reducido */
-      color: #555555;
-      font-size: 1.8em; /* Reducido ligeramente */
+      margin-bottom: 30px;
+      color: #FFFFFF; /* Título blanco */
+      font-size: 1.8em;
     }
     .year-container {
       display: flex;
-      gap: 15px; /* Reducido */
+      gap: 15px;
       overflow-x: auto;
       justify-content: flex-start;
-      padding-bottom: 15px; /* Reducido */
+      padding-bottom: 15px;
       margin: 0 auto;
       max-width: 100%;
     }
     .year-column {
       display: flex;
       flex-direction: column;
-      gap: 15px; /* Reducido */
-      min-width: 250px; /* Más pequeño para que quepa más en pantalla */
+      gap: 15px;
+      min-width: 250px;
       flex-shrink: 0;
     }
 
     /* Estilos base para semestre y ramo */
     .semestre {
-      border-radius: 10px; /* Menos redondeado */
-      box-shadow: 0 4px 10px rgba(0,0,0,0.1); /* Sombra más sutil */
-      padding: 15px; /* Reducido */
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(255,255,255,0.1); /* Sombra blanca para fondo oscuro */
+      padding: 15px;
       transition: all 0.3s ease;
     }
     .semestre h2 {
-      font-size: 1.0em; /* Reducido */
-      margin-bottom: 10px; /* Reducido */
+      font-size: 1.0em;
+      margin-bottom: 10px;
       text-align: center;
+      color: inherit; /* Hereda el color del texto del semestre */
     }
     .ramo {
-      padding: 8px; /* Reducido */
-      margin: 5px 0; /* Reducido */
-      border-radius: 6px; /* Menos redondeado */
+      padding: 8px;
+      margin: 5px 0;
+      border-radius: 6px;
       cursor: pointer;
       transition: all 0.3s ease;
       text-align: center;
@@ -58,14 +60,15 @@
       white-space: nowrap;
       overflow: hidden;
       text-overflow: ellipsis;
-      font-size: 0.9em; /* Reducido */
+      font-size: 0.9em;
+      color: inherit; /* Hereda el color del texto del ramo */
     }
     .ramo:hover {
-      transform: translateY(-2px); /* Efecto hover más sutil */
-      box-shadow: 0 3px 6px rgba(0,0,0,0.2);
+      transform: translateY(-2px);
+      box-shadow: 0 3px 6px rgba(255,255,255,0.2); /* Sombra blanca para fondo oscuro */
     }
 
-    /* Colores Pastel para cada Año/Columna (mismos tonos, pero se aplicarán a un layout más pequeño) */
+    /* Colores Pastel para cada Año/Columna */
     /* Año 1: Tono pastel de Rojo/Rosa */
     .year-column:nth-child(1) .semestre {
       background: #FFDDEE; /* Rosado pastel */
