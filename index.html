@@ -7,21 +7,18 @@
   <style>
     body {
       font-family: Arial, sans-serif;
-      /* Fondo rosado claro, cercano al rojo */
-      background: #FFE0E0;
+      background: #FFE0E0; /* Rosado claro */
       margin: 0;
       padding: 20px;
     }
     h1 {
       text-align: center;
       margin-bottom: 40px;
-      /* Letras del título en rosado o rojo más oscuro */
-      color: #A00000;
+      color: #A00000; /* Rojo oscuro */
     }
     .year-container {
       display: flex;
       gap: 20px;
-      /* Permite el desplazamiento horizontal si el contenido es demasiado ancho */
       overflow-x: auto;
       justify-content: center;
       padding-bottom: 20px;
@@ -30,12 +27,11 @@
       display: flex;
       flex-direction: column;
       gap: 20px;
-      min-width: 280px; /* Asegura un ancho mínimo para cada año */
+      min-width: 280px;
     }
     .semestre {
-      /* Tonalidad rojiza clara con borde rojo */
-      background: #FFCCCC;
-      border: 2px solid #CC0000;
+      background: #FFCCCC; /* Rojizo claro */
+      border: 2px solid #CC0000; /* Borde rojo */
       border-radius: 12px;
       box-shadow: 0 4px 10px rgba(0,0,0,0.15);
       padding: 15px;
@@ -53,12 +49,10 @@
       border-radius: 8px;
       cursor: pointer;
       transition: all 0.3s ease;
-      /* Color del recuadro un poco más intenso */
-      background-color: #FF9999;
+      background-color: #FF9999; /* Rojo rosado más intenso */
       color: #400000;
       text-align: center;
       font-weight: bold;
-      /* Previene que el texto salte de línea de forma inesperada */
       white-space: nowrap;
       overflow: hidden;
       text-overflow: ellipsis;
@@ -68,9 +62,8 @@
       box-shadow: 0 2px 6px rgba(0,0,0,0.2);
     }
     .ramo.completed {
-      /* Cuando es cliqueado y completado */
-      background-color: #800080 !important;
-      color: #FFFFFF;
+      background-color: #DDA0DD !important; /* Morado suave (Plum) */
+      color: #580058; /* Color de texto para el morado suave */
       text-decoration: line-through;
       font-weight: normal;
     }
@@ -83,86 +76,123 @@
 <div class="year-column">
 <div class="semestre">
   <h2>1° Año - Semestre I</h2>
-  <div class="ramo" onclick="this.classList.toggle('completed')">Comunicación I</div>
-  <div class="ramo" onclick="this.classList.toggle('completed')">Fundamentos de la Salud Sexual y Reproductiva</div>
-  <div class="ramo" onclick="this.classList.toggle('completed')">Bases Biológicas en la Salud Sexual y Reproductiva</div>
-  <div class="ramo" onclick="this.classList.toggle('completed')">Bases Bioquímicas en Salud Sexual y Reproductiva</div>
-  <div class="ramo" onclick="this.classList.toggle('completed')">Antropología en Salud Sexual y Reproductiva</div>
+  <div class="ramo" data-ramo-id="1-1-comunicacion-i">Comunicación I</div>
+  <div class="ramo" data-ramo-id="1-1-fundamentos-salud-sexual-reproductiva">Fundamentos de la Salud Sexual y Reproductiva</div>
+  <div class="ramo" data-ramo-id="1-1-bases-biologicas">Bases Biológicas en la Salud Sexual y Reproductiva</div>
+  <div class="ramo" data-ramo-id="1-1-bases-bioquimicas">Bases Bioquímicas en Salud Sexual y Reproductiva</div>
+  <div class="ramo" data-ramo-id="1-1-antropologia">Antropología en Salud Sexual y Reproductiva</div>
 </div>
 <div class="semestre">
   <h2>1° Año - Semestre II</h2>
-  <div class="ramo" onclick="this.classList.toggle('completed')">Ciudadanía I</div>
-  <div class="ramo" onclick="this.classList.toggle('completed')">Bioestadística</div>
-  <div class="ramo" onclick="this.classList.toggle('completed')">Microbiología y Parasitología</div>
-  <div class="ramo" onclick="this.classList.toggle('completed')">Anatomía</div>
-  <div class="ramo" onclick="this.classList.toggle('completed')">Fisiología e Histología</div>
-  <div class="ramo" onclick="this.classList.toggle('completed')">Enfermería Básica</div>
-  <div class="ramo" onclick="this.classList.toggle('completed')">Electivo UFIN</div>
+  <div class="ramo" data-ramo-id="1-2-ciudadania-i">Ciudadanía I</div>
+  <div class="ramo" data-ramo-id="1-2-bioestadistica">Bioestadística</div>
+  <div class="ramo" data-ramo-id="1-2-microbiologia-parasitologia">Microbiología y Parasitología</div>
+  <div class="ramo" data-ramo-id="1-2-anatomia">Anatomía</div>
+  <div class="ramo" data-ramo-id="1-2-fisiologia-histologia">Fisiología e Histología</div>
+  <div class="ramo" data-ramo-id="1-2-enfermeria-basica">Enfermería Básica</div>
+  <div class="ramo" data-ramo-id="1-2-electivo-ufin-1">Electivo UFIN</div>
 </div>
 </div>
 <div class="year-column">
 <div class="semestre">
   <h2>2° Año - Semestre III</h2>
-  <div class="ramo" onclick="this.classList.toggle('completed')">Inglés I</div>
-  <div class="ramo" onclick="this.classList.toggle('completed')">Epidemiología</div>
-  <div class="ramo" onclick="this.classList.toggle('completed')">Psicología</div>
-  <div class="ramo" onclick="this.classList.toggle('completed')">Fisiopatología y Farmacología</div>
-  <div class="ramo" onclick="this.classList.toggle('completed')">Bases Fisiológicas en Ginecología</div>
-  <div class="ramo" onclick="this.classList.toggle('completed')">Proceso de Enfermería en Salud Sexual y Reproductiva</div>
+  <div class="ramo" data-ramo-id="2-3-ingles-i">Inglés I</div>
+  <div class="ramo" data-ramo-id="2-3-epidemiologia">Epidemiología</div>
+  <div class="ramo" data-ramo-id="2-3-psicologia">Psicología</div>
+  <div class="ramo" data-ramo-id="2-3-fisiopatologia-farmacologia">Fisiopatología y Farmacología</div>
+  <div class="ramo" data-ramo-id="2-3-bases-fisiologicas-ginecologia">Bases Fisiológicas en Ginecología</div>
+  <div class="ramo" data-ramo-id="2-3-proceso-enfermeria-salud-sexual-reproductiva">Proceso de Enfermería en Salud Sexual y Reproductiva</div>
 </div>
 <div class="semestre">
   <h2>2° Año - Semestre IV</h2>
-  <div class="ramo" onclick="this.classList.toggle('completed')">Inglés II</div>
-  <div class="ramo" onclick="this.classList.toggle('completed')">Bases Fisiológicas en Obstetricia y Neonatología</div>
-  <div class="ramo" onclick="this.classList.toggle('completed')">Bases Patológicas en Ginecología</div>
-  <div class="ramo" onclick="this.classList.toggle('completed')">Salud Familiar y Comunitaria</div>
-  <div class="ramo" onclick="this.classList.toggle('completed')">Proceso de Enfermería en la Gineco-Obstetricia</div>
-  <div class="ramo" onclick="this.classList.toggle('completed')">Electivo UFIN</div>
+  <div class="ramo" data-ramo-id="2-4-ingles-ii">Inglés II</div>
+  <div class="ramo" data-ramo-id="2-4-bases-fisiologicas-obstetricia-neonatologia">Bases Fisiológicas en Obstetricia y Neonatología</div>
+  <div class="ramo" data-ramo-id="2-4-bases-patologicas-ginecologia">Bases Patológicas en Ginecología</div>
+  <div class="ramo" data-ramo-id="2-4-salud-familiar-comunitaria">Salud Familiar y Comunitaria</div>
+  <div class="ramo" data-ramo-id="2-4-proceso-enfermeria-gineco-obstetricia">Proceso de Enfermería en la Gineco-Obstetricia</div>
+  <div class="ramo" data-ramo-id="2-4-electivo-ufin-2">Electivo UFIN</div>
 </div>
 </div>
 <div class="year-column">
 <div class="semestre">
   <h2>3° Año - Semestre V</h2>
-  <div class="ramo" onclick="this.classList.toggle('completed')">Inglés III</div>
-  <div class="ramo" onclick="this.classList.toggle('completed')">Introducción a la Gestión en Salud Sexual y Reproductiva</div>
-  <div class="ramo" onclick="this.classList.toggle('completed')">Bases Patológicas en Obstetricia y Neonatología</div>
-  <div class="ramo" onclick="this.classList.toggle('completed')">Educación en Salud Sexual y Reproductiva</div>
-  <div class="ramo" onclick="this.classList.toggle('completed')">Salud Familiar en APS</div>
+  <div class="ramo" data-ramo-id="3-5-ingles-iii">Inglés III</div>
+  <div class="ramo" data-ramo-id="3-5-introduccion-gestion-salud-sexual-reproductiva">Introducción a la Gestión en Salud Sexual y Reproductiva</div>
+  <div class="ramo" data-ramo-id="3-5-bases-patologicas-obstetricia-neonatologia">Bases Patológicas en Obstetricia y Neonatología</div>
+  <div class="ramo" data-ramo-id="3-5-educacion-salud-sexual-reproductiva">Educación en Salud Sexual y Reproductiva</div>
+  <div class="ramo" data-ramo-id="3-5-salud-familiar-aps">Salud Familiar en APS</div>
 </div>
 <div class="semestre">
   <h2>3° Año - Semestre VI</h2>
-  <div class="ramo" onclick="this.classList.toggle('completed')">Inglés IV</div>
-  <div class="ramo" onclick="this.classList.toggle('completed')">Metodología de la Investigación</div>
-  <div class="ramo" onclick="this.classList.toggle('completed')">Clínica de Cuidados Perinatales</div>
-  <div class="ramo" onclick="this.classList.toggle('completed')">Electivo UFIN</div>
+  <div class="ramo" data-ramo-id="3-6-ingles-iv">Inglés IV</div>
+  <div class="ramo" data-ramo-id="3-6-metodologia-investigacion">Metodología de la Investigación</div>
+  <div class="ramo" data-ramo-id="3-6-clinica-cuidados-perinatales">Clínica de Cuidados Perinatales</div>
+  <div class="ramo" data-ramo-id="3-6-electivo-ufin-3">Electivo UFIN</div>
 </div>
 </div>
 <div class="year-column">
 <div class="semestre">
   <h2>4° Año - Semestre VII</h2>
-  <div class="ramo" onclick="this.classList.toggle('completed')">Seminario de Investigación</div>
-  <div class="ramo" onclick="this.classList.toggle('completed')">Clínica gine-oncológica</div>
-  <div class="ramo" onclick="this.classList.toggle('completed')">Electivo UFIN</div>
+  <div class="ramo" data-ramo-id="4-7-seminario-investigacion">Seminario de Investigación</div>
+  <div class="ramo" data-ramo-id="4-7-clinica-gine-oncologica">Clínica gine-oncológica</div>
+  <div class="ramo" data-ramo-id="4-7-electivo-ufin-4">Electivo UFIN</div>
 </div>
 <div class="semestre">
   <h2>4° Año - Semestre VIII</h2>
-  <div class="ramo" onclick="this.classList.toggle('completed')">Gestión de Proyectos (Ciudadanía II)</div>
-  <div class="ramo" onclick="this.classList.toggle('completed')">Clínica Perinatal Patológica</div>
+  <div class="ramo" data-ramo-id="4-8-gestion-proyectos">Gestión de Proyectos (Ciudadanía II)</div>
+  <div class="ramo" data-ramo-id="4-8-clinica-perinatal-patologica">Clínica Perinatal Patológica</div>
 </div>
 </div>
 <div class="year-column">
 <div class="semestre">
   <h2>5° Año - Semestre IX</h2>
-  <div class="ramo" onclick="this.classList.toggle('completed')">Internado I</div>
-  <div class="ramo" onclick="this.classList.toggle('completed')">Electivo Especialización / Articulación Postgrado</div>
+  <div class="ramo" data-ramo-id="5-9-internado-i">Internado I</div>
+  <div class="ramo" data-ramo-id="5-9-electivo-especializacion">Electivo Especialización / Articulación Postgrado</div>
 </div>
 <div class="semestre">
   <h2>5° Año - Semestre X</h2>
-  <div class="ramo" onclick="this.classList.toggle('completed')">Internado II</div>
+  <div class="ramo" data-ramo-id="5-10-internado-ii">Internado II</div>
 </div>
 </div>
 
 </div>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const ramos = document.querySelectorAll('.ramo');
+
+    // Función para cargar el estado guardado
+    function loadCompletedRamos() {
+      const completedRamos = JSON.parse(localStorage.getItem('completedRamos')) || [];
+      ramos.forEach(ramo => {
+        const ramoId = ramo.dataset.ramoId;
+        if (completedRamos.includes(ramoId)) {
+          ramo.classList.add('completed');
+        }
+      });
+    }
+
+    // Función para guardar el estado actual
+    function saveCompletedRamos() {
+      const completedRamos = [];
+      document.querySelectorAll('.ramo.completed').forEach(ramo => {
+        completedRamos.push(ramo.dataset.ramoId);
+      });
+      localStorage.setItem('completedRamos', JSON.stringify(completedRamos));
+    }
+
+    // Añadir el evento de clic a cada ramo
+    ramos.forEach(ramo => {
+      ramo.addEventListener('click', function() {
+        this.classList.toggle('completed');
+        saveCompletedRamos(); // Guardar el estado cada vez que se hace clic
+      });
+    });
+
+    // Cargar el estado al cargar la página
+    loadCompletedRamos();
+  });
+</script>
 
 </body>
 </html>
